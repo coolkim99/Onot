@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LoginActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_weight="0">
+        <ImageView
+            android:id="@+id/bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/black" />
+        <Button
+            android:id="@+id/search"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/searchbutton"
+            android:padding="0sp"
+            android:scaleType="fitCenter" />
+        <Button
+            android:id="@+id/bell"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bellbutton" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로그인"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/junggt"
+        android:id="@+id/text"
+        android:layout_weight="0.3"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <EditText
+            android:id="@+id/edit1"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:hint="@string/id"
+            android:fontFamily="@font/junggt"
+            android:backgroundTint="#727272"
+            android:textColorHint="#727272"
+            android:cursorVisible="true" />
+
+        <EditText
+            android:id="@+id/edit2"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:layout_below='@+id/edit1'
+            android:backgroundTint="#727272"
+            android:textColorHint="#727272"
+            android:cursorVisible="true"
+            android:fontFamily="@font/junggt"/>
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/edit2"
+            android:layout_toLeftOf="@id/join"
+            android:text="로그인"
+            android:fontFamily="@font/junggt"/>
+
+        <Button
+            android:id="@+id/join"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/login"
+            android:layout_alignEnd="@+id/edit2"
+            android:layout_alignRight="@+id/edit2"
+            android:text="회원가입"
+            android:fontFamily="@font/junggt"/>
+    </RelativeLayout>
+</LinearLayout>

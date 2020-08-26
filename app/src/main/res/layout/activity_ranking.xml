@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".RankActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white">
+<!--상단 로고 및 메뉴-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_weight="0">
+
+        <ImageView
+            android:id="@+id/bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/black" />
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/searchbutton"
+            android:padding="0sp"
+            android:scaleType="fitCenter" />
+
+        <Button
+            android:id="@+id/bell"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bellbutton" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="18dp"
+                android:fontFamily="@font/ridibatang"
+                android:gravity="center"
+                android:text="따뜻한 마음들"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#BDBDBD" />
+            <!--3등까지 랭킹-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!-- 2등 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="50dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/junggt"
+                        android:gravity="center"
+                        android:text="495876 kg"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/junggt"
+                        android:gravity="center"
+                        android:text="2등 님"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </LinearLayout>
+                <!-- 1등 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/junggt"
+                        android:gravity="center"
+                        android:text="548952 kg"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/junggt"
+                        android:gravity="center"
+                        android:text="1등 님"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </LinearLayout>
+                <!-- 3등 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="215dp"
+                    android:layout_marginTop="70dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/junggt"
+                        android:gravity="center"
+                        android:text="425862 kg"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/junggt"
+                        android:gravity="center"
+                        android:text="3등 님"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="60dp"
+                    android:src="@drawable/rank" />
+            </RelativeLayout>
+            <!--나의 랭킹-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:textColor="@color/black">
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="2px"
+                    android:layout_marginLeft="25dp"
+                    android:background="#BDBDBD" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="4"
+                        android:textColor="#727272"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="지현"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="402586 kg"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="2px"
+                    android:layout_marginLeft="25dp"
+                    android:background="#BDBDBD" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="5"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="easy아"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="392526 kg"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="2px"
+                    android:layout_marginLeft="25dp"
+                    android:background="#BDBDBD" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="6"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="잡채"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="391056 kg"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="2px"
+                    android:layout_marginLeft="25dp"
+                    android:background="#BDBDBD" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="7"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="cool"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="389128 kg"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+            </LinearLayout>
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="2px"
+                    android:layout_marginLeft="25dp"
+                    android:background="#BDBDBD" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="8"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="훈제오리"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="379951 kg"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="2px"
+                    android:layout_marginLeft="25dp"
+                    android:background="#BDBDBD" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="9"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="정지우"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="378251 kg"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="2px"
+                    android:layout_marginLeft="25dp"
+                    android:background="#BDBDBD" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="10"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="jkdlll"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="370951 kg"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="2px"
+                    android:layout_marginLeft="25dp"
+                    android:background="#BDBDBD" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="11"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="LOveU"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="368951 kg"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="2px"
+                    android:layout_marginLeft="25dp"
+                    android:background="#BDBDBD" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="12"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="gjsdht"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="362311 kg"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="2px"
+                    android:layout_marginLeft="25dp"
+                    android:background="#BDBDBD" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="13"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="호로록"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/junggt"
+                        android:text="359228 kg"
+                        android:textSize="15sp"
+                        android:textColor="#727272"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="2px"
+                    android:layout_marginLeft="25dp"
+                    android:background="#BDBDBD" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="현재 나의 순위"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/junggt"/>
+
+                    <TextView
+                        android:id="@+id/userRank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:text=""
+                        android:fontFamily="@font/junggt"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 등"
+                        android:fontFamily="@font/junggt"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="지금까지 "
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/junggt"/>
+
+                    <TextView
+                        android:id="@+id/kg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/junggt"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:text="kg 전해졌습니다"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/junggt"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="#BDBDBD" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/cloth"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/clothbutton" />
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:gravity="center"
+                    android:text="마켓"
+                    android:fontFamily="@font/junggt"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/heart"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/heartbutton" />
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:gravity="center"
+                    android:text="활동"
+                    android:fontFamily="@font/junggt"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/plus"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/plusbutton" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:gravity="center"
+                    android:text="글쓰기"
+                    android:fontFamily="@font/junggt"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/ranking"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/kgbutton" />
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:gravity="center"
+                    android:text="랭킹"
+                    android:fontFamily="@font/ridibatang"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/mypage"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/peoplebutton"/>
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:gravity="center"
+                    android:text="마이"
+                    android:fontFamily="@font/ridibatang"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

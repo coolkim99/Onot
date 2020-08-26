@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_weight="0">
+
+        <ImageView
+            android:id="@+id/bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/black" />
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/searchbutton"
+            android:padding="0sp"
+            android:scaleType="fitCenter" />
+
+        <Button
+            android:id="@+id/bell"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bellbutton" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="18dp"
+                android:fontFamily="@font/ridibatang"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="당신과 온옷이 만들어 낸 특별한 기부"
+                android:textColor="#000000" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#BDBDBD" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/seoulnamsan"
+                android:paddingTop="20dp"
+                android:text="상품정보"
+                android:textColor="@android:color/black"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/pager4"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#BDBDBD" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableLayout
+                    android:id="@+id/table"
+                    android:layout_width="280dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="35dp"
+                            android:fontFamily="@font/seoulnamsan"
+                            android:gravity="center"
+                            android:text="상품 이름"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/Pname"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/seoulnamsan"
+                            android:gravity="center"
+                            android:text="완전 편한 슬랙스"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+
+                        android:padding="1dp">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="35dp"
+                            android:fontFamily="@font/seoulnamsan"
+                            android:gravity="center"
+                            android:text="상품 가격"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/Price"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/seoulnamsan"
+                            android:gravity="center"
+                            android:text="18,000 원"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp" />
+                    </TableRow>
+                </TableLayout>
+
+                <ImageView
+                    android:id="@+id/userimg"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/table"
+                    android:background="@drawable/user"
+                    android:gravity="center"
+                    android:text="#ff0000" />
+
+                <TextView
+                    android:id="@+id/userid"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/userimg"
+                    android:layout_toRightOf="@id/table"
+                    android:fontFamily="@font/seoulnamsan"
+                    android:gravity="center"
+                    android:text="지현"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#BDBDBD" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/seoulnamsan"
+                android:gravity="center_vertical"
+                android:text="가격 상세정보"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#EEEEEE"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:background="#EEEEEE"
+                        android:gravity="center"
+                        android:fontFamily="@font/seoulnamsan"
+                        android:text="상품금액"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+
+                        android:id="@+id/price"
+                        android:layout_width="241dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.5"
+                        android:background="#EEEEEE"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/seoulnamsan"
+                        android:textColor="@android:color/black"
+                        android:text="18,000"/>
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EEEEEE"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:background="#EEEEEE"
+                        android:gravity="center"
+                        android:fontFamily="@font/seoulnamsan"
+                        android:text="기부금액"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+
+                        android:id="@+id/price2"
+                        android:layout_width="241dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.5"
+                        android:background="#EEEEEE"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/seoulnamsan"
+                        android:text="3,600"
+                        android:textSize="18sp" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/seoulnamsan"
+                android:text="상품 상세설명"
+                android:gravity="center_vertical"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="#EEEEEE">
+                <TableRow
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:id="@+id/exp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:background="#EEEEEE"
+                        android:fontFamily="@font/seoulnamsan"
+                        android:text="한 번 잠깐 입고 세탁한 상태라 상태는 정말 좋아효! 다리 완전 길어보이고 모델피이랑 핏 똑같아요!"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+                </TableRow>
+            </TableLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/seoulnamsan"
+                android:layout_gravity="center"
+                android:text="* 판매 금액의 20% 중 15%는 기부금으로 쓰이며 5%는 온옷 운영비로 쓰입니다! "
+                android:textColor="#C41C1C"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/order"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="250dp"
+            android:layout_height="90dp"
+            android:fontFamily="@font/ridibatang"
+            android:text="주문하기"
+            android:textSize="30sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/click"/>
+
+        <Button
+            android:id="@+id/cancel"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="145dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="250dp"
+            android:fontFamily="@font/ridibatang"
+            android:text="취소"
+            android:textSize="30sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/click2"/>
+    </RelativeLayout>
+</LinearLayout>
